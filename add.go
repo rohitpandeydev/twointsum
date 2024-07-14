@@ -1,9 +1,18 @@
-//This package takes two int number and returns sum of them
+//This package takes two  number of type Intger or Float [fromhere] and returns sum of them
+// [fromhere]: https://golang.org/x/exp/constraints
 
 package twointsum
 
-// Add takes two int as parameter and return an int which is sum of both the input parameter same as [numberadditon]
+import (
+	constra "golang.org/x/exp/constraints"
+)
+
+type Number interface {
+	constra.Float | constra.Integer
+}
+
+// Add takes two number as parameter and return an number which is sum of both the input parameter same as [numberadditon]
 // [numberaddition]:  https://www.mathsisfun.com/numbers/addition.html
-func Add(a, b int) int {
+func Add[T Number](a, b T) T {
 	return a + b
 }
