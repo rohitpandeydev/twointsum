@@ -1,4 +1,4 @@
-module github.com/vvmrohit/twointsum
+module github.com/vvmrohit/twointsum/v2
 
 go 1.22.4
 
