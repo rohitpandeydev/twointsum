@@ -23,6 +23,6 @@ jobs:
         run: go mod download
 
       - name: Run GolangCI-Lint
-        uses: golangci/golangci-lint-action@v3
+        uses: golangci/golangci-lint-action@v6
         with:
-          version: v6.0.1
+          version: v1.59
